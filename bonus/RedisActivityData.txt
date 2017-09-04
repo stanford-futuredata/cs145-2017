@@ -1,0 +1,12 @@
+HMSET user:1 username jill age 29 city Seattle
+HMSET user:2 username kirito age 16 city Tokyo
+HMSET user:3 username sara age 21 city Seattle
+HMSET user:4 username ann age 24 city Chicago
+HMSET user:5 username joy age 99 city Stanford
+HMSET user:6 username firas age 48 city Stanford
+HMSET user:7 username matt age 34 city Boston
+HMSET user:8 username bob age 32 city Chicago
+HMSET user:9 username grace age 51 city Chicago
+HMSET user:10 username phil age 73 city Chicago
+SET next_user_id 10
+HMSET users jill 1 kirito 2 sara 3 ann 4 joy 5 firas 6 matt 7 bob 8 grace 9 phil 10
