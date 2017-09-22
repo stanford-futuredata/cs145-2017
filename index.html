@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CS 145 - Introduction to Databases (Autumn 2016)</title>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<div class="container">
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">CS 145</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#description">Description</a></li>
+              <li><a href="#logistics">Class Logistics</a></li>
+              <li><a href="#lecture">Lecture Plan</a></li>
+              <li><a href="#grading">Grading</a></li>
+              <li class="divider"></li>
+              <li><a href="#staff">Staff</a></li>
+              <li class="divider"></li>
+              <li><a href="#late-policy">Late Policy</a></li>
+              <li><a href="#honor-code">Honor Code</a></li>
+              <li><a href="#disability">Disability</a></li>
+            </ul>
+          </li>
+          <li><a href="#office-hours">Office Hours</a></li>
+          <!-- <li><a href="https://piazza.com/stanford/fall2017/cs145">Piazza</a></li> -->
+          <li><a href="https://piazza.com/stanford/fall2017/cs145">Piazza</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<div class="jumbotron">
+<h1>CS145 Introduction to Databases</h1>
+<h3>NVIDIA Auditorium on TTh 3:00-4:20pm</h3>
+<p class="lead">Chat with us on <a href="https://piazza.com/stanford/fall2017/cs145">the course Piazza site</a> if you have any questions!</p>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Description</div>
+  <div class="panel-body">
+    <a name="description"></a>
+This course covers database design and the use of databases in
+applications, with a short introduction to the internals of relational
+database engines. It includes extensive coverage of the relational
+model, relational algebra, and SQL. The course also features database
+design and relational design principles based on dependencies and
+normal forms. Many additional key database topics from the design and
+application-building perspective are also covered, including indexes, views,
+transactions, and integrity constraints. Systems such as MapReduce
+framework and key-value stores will also be covered. There will be a
+programming project, which explores database design and management in
+web applications by utilizing appropriate features of SQL.
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Class Logistics</div>
+  <div class="panel-body">
+	  <a name="logistics"></a>
+    <p>
+We're excited to once again utilize <i>Jupyter notebooks</i> to allow for more
+interactivity in the class. Installation instructions are available <a href="https://github.com/stanford-futuredata/cs145-2017/blob/master/jupyter_install.md">here</a>.
+Python is used in the in-class activities, homework and projects.
+<br>
+<p>
+For the attendance portion of the class (SCPD students are exempt from this), we will write a code on the board during class. From your primary stanford email, send a note to <b>cs145-attendance@cs.stanford.edu</b> with the code in the <b>Subject Line</b> of the email. Do not write anything other than the code in the subject line and make sure that the body of the email is empty. You are responsible for attending 10 classes.</p>
+    </p>
+	</div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title">Lecture Plan</h2>
+  </div>
+  <div class="panel-body">
+    <a name="lecture"></a>
+    <p>
+The reading material listed below is optional, but it refers to
+<i>Database Systems: The Complete Book</i> by Garcia-Molina, Ullman,
+and Widom. The lecture plan below may change.
+    </p>
+    <p>
+    <hr /> 
+
+<table class="plan">
+  <tbody>
+    <tr>
+      <th>#</th>
+      <th>Date</th>
+      <th>Topic</th>
+      <th>Lecture Materials</th>
+      <th><i>Extra</i> Reading Material</th>
+      <th>Assignments</th>
+    </tr>
+    <tr>
+      <td align="center" colspan="6" class="small-section-header">Introduction and Querying</td>
+    </tr>
+  <tr>
+    <td>1</td>
+    <td>9/26</td>
+    <td>Course Logistics and Database History</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>9/28</td>
+    <td>SQL: Introduction</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>10/3</td>
+    <td>SQL: Advanced</td>
+  </tr>
+      <td align="center" colspan="6" class="small-section-header">Database Design and Normal Forms</td>  
+  <tr>
+    <td>4</td>
+    <td>10/5</td>
+    <td>Database Design: ER Diagrams</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>10/10</td>
+    <td>Database Design: Theory 1</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>10/12</td>
+    <td>Database Design: Theory 2</td>
+  </tr>
+      <td align="center" colspan="6" class="small-section-header">Transaction Processing</td>    
+  <tr>
+    <td>7</td>
+    <td>10/17</td>
+    <td>Transactions: A User's Perspective</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>10/19</td>
+    <td>Mechanisms for Transactions: Concurrency Control</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>10/24</td>
+    <td>Mechanisms for Transactions: Logging</td>
+  </tr>
+<td align="center" colspan="6" class="small-section-header">Midterm</td>      
+  <tr class="exam">
+    <td>10</td>
+    <td>10/26</td>
+    <td>Midterm Review</td>
+  </tr>
+  <tr class="exam">
+    <td>11</td>
+    <td>10/31</td>
+    <td>Midterm</td>
+  </tr>
+<td align="center" colspan="6" class="small-section-header">Query Processing and Database Internals</td>        
+  <tr>
+    <td>12</td>
+    <td>11/2</td>
+    <td>I/O Cost Models and External Sort</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>11/7</td>
+    <td>Indexing</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>11/9</td>
+    <td>Access Methods and Operators</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>11/14</td>
+    <td>Joins</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>11/16</td>
+    <td>Relational Algebra</td>
+  </tr>
+<td align="center" colspan="6" class="small-comment-header">Thanksgiving Recess: 11/20-11/24</td>
+  <tr>
+    <td>17</td>
+    <td>11/28</td>
+    <td>Query Optimization</td>
+  </tr>
+<td align="center" colspan="6" class="small-section-header">Advanced Topics</td>          
+  <tr>
+    <td>18</td>
+    <td>11/30</td>
+    <td>NoSQL Systems</td>
+  </tr>
+  <tr>
+    <td>19</td>
+    <td>12/5</td>
+    <td>Distributed Data Processing</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>12/7</td>
+    <td>Final Exam Review</td>
+  </tr>
+
+    </table>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Midterm Exam</div>
+  <div class="panel-body">
+    The midterm exam will be in class on <b>October 27th from 3:00pm - 4:20pm</b>.  The locations will be:
+    <ul>
+      <li>NVIDIA Auditorium - Last Names A-L</li>
+      <li>Hewlett 200 - Last Names M-Z</li>
+    </ul>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Final Exam</div>
+  <div class="panel-body">
+    The final exam will be on <b>December 12th at 3:30pm</b>.
+  </div>
+</div> 
+
+<div class="panel panel-default">
+  <div class="panel-heading">Grading</div>
+  <div class="panel-body">
+    <a name="grading"></a>
+    <table class="table">
+      <tr><td>Lecture Attendance</td><td>10%</td>
+      <tr><td>Problem Sets</td><td>20%</td>
+      <tr><td>Programming Project</td><td>20%</td>
+      <tr><td>Midterm</td><td>20%</td>
+      <tr><td>Final</td><td>30%</td>
+    </table>
+    <p><b>Note: SCPD students will be exempt from the "Lecture Attendance" portion.
+     Grading will be scaled proportionately over the remaining segments.
+    </b></p>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Office Hours</div>
+  <div class="panel-body">
+    <a name="office-hours"></a>
+<p>
+Unless otherwise specified in the staff section below, office hours will be
+held in the <strong>open area of the Huang basement</strong>.
+CAs will bring signs to identify themselves.  Please see the staff
+section below for office hours.
+</p>
+<p>
+<b><i>
+Note: the schedule of office hours may change from time to time,
+in which case an announcement will be made on the course Piazza.
+</i></b>
+</p>
+</div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Staff</div>
+  <div class="panel-body">
+    <a name="staff"></a>
+    <table class="table">
+      <thead>
+        <tr><th></th><th></th></tr>
+      </thead>
+	Please use <a href="https://piazza.com/stanford/fall2017/cs145">Piazza</a> to contact the course staff!
+      <tbody>
+        <tr><td>Peter Bailis</td></tr>
+        <tr><td>Tara Balakrishnan</td></tr>
+        <tr><td>Dev Bhargava</td></tr>
+	<tr><td>William Chen</td></tr>
+        <tr><td>Soroosh Hemmati</td></tr>
+        <tr><td>Woncheol Jeong</td></tr>
+        <tr><td>Lingtong Sun</td></tr>
+        <tr><td>Stephanie Tang</td></tr>
+        <tr><td>Amelia Vu</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">OH Schedule</div>
+  <div class="panel-body">
+    <iframe src="https://www.google.com/calendar/embed?src=jfql4os6mq9c1fnuor9pt00tio%40group.calendar.google.com&ctz=America/Los_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">Late Policy</div>
+  <div class="panel-body">
+  <a name="late-policy"></a>
+You will have three 24-hour "late days" that you can use
+throughout the quarter on any of the Problem Sets or Programming
+Projects, unless specified otherwise. Beyond these three late days, we
+will only grant extensions in the case of a severe medical or family
+emergency. Please use your late days wisely.
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Honor Code and Collaboration Policy</div>
+  <div class="panel-body">
+<a name="honor-code"></a>
+<p>
+We encourage you to discuss the Programming Projects and Problem Sets
+with other students; it's fine to discuss overall strategy and
+collaborate with a partner or in a small group, as both giving and
+receiving advice will help you to learn.
+</p>
+<p>
+However, for the Programming Projects, you must write your own code: it's not OK to share code or write code collaboratively. (This includes posting and/or sharing your code publicly, such as on GitHub!) Likewise, for the Problem Sets, you must write up your own solutions to all of the problems, and you must cite all people you worked with. If you do not do so, we will consider this a violation of the <a href="https://communitystandards.stanford.edu/student-conduct-process/honor-code-and-fundamental-standard">Stanford Honor Code</a>.
+</p>
+<p>
+If you consult any resources outside of the materials provided in
+class, you must cite these sources. We reserve the right to assign a
+penalty if your answers are substantially derivative, but, as long as
+you provide appropriate citations, we will not consider this an Honor
+Code violation.
+</p>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Students with Documented Disabilities</div>
+  <div class="panel-body">
+<a name="disability"></a>
+Students who may need an academic accommodation based on the impact of
+a disability must initiate the request through the Office of
+Accessible Education (OAE). OAE staff will evaluate the request with
+required documentation, recommend reasonable accommodations, and
+prepare an Accommodation Letter for faculty dated in the current
+quarter in which the request is being made. Students should contact
+OAE as soon as possible since timely notice is needed to coordinate
+accommodations: 563 Salvatierra Walk; phone: (650) 723-1066.
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Feedback</div>
+  <div class="panel-body">
+    Please provide feedback to Peter and/or any of the course staff <a href="https://piazza.com/stanford/fall2017/cs145">via Piazza</a>, or <a href="https://goo.gl/forms/e2lshLKDgW1pcbjS2">anonymously via the this form</a>, which only Peter can access.
+  </div>
+</div>
+
+</div>
+</body>
+
+</html>
