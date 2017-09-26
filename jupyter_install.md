@@ -52,7 +52,7 @@ pip install --user --upgrade ipython-sql
 You can always access the latest course materials on the course website, however you can also get them all at once, and keep them synced, by using git.  To get started with this method, run:
 
 ```
-git clone https://github.com/HazyResearch/cs145-notebooks-2016.git
+git clone https://github.com/stanford-futuredata/cs145-2017.git
 ```
 
 Now you should have all the materials in a `cs145-notebooks-2016` folder; to get the latest versions, just run:
