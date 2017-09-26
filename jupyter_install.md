@@ -55,14 +55,14 @@ You can always access the latest course materials on the course website, however
 git clone https://github.com/stanford-futuredata/cs145-2017.git
 ```
 
-Now you should have all the materials in a `cs145-notebooks-2016` folder; to get the latest versions, just run:
+Now you should have all the materials in a `cs145-2017` folder; to get the latest versions, just run:
 
 ```
 git pull
 ```
 
 ### Running stuff
-In the directory where the relevant course materials are (if you followed the above step, this will be in the `cs145-notebooks-2016` directory), run:
+In the directory where the relevant course materials are (if you followed the above step, this will be in the `cs145-2017` directory), run:
 
 ```
 jupyter notebook
