@@ -37,7 +37,7 @@ Before submitting, PLEASE SANITY CHECK YOUR SUBMISSION TEMPLATE. To run the sani
 
 python /usr/class/cs145/bin/sanity_check.py
 
-It will notify you of any problems that would break the autograder. Please note that the sanity checker DOES NOT run your SQL queries; it merely ensures that the formatting of your submission template is correct and that the variables we expect are present.
+It will notify you of any problems that would break the autograder and verifies that your output matches the correct output.
 
 If your template passes the sanity checker, you can submit your assignment by running the following command in your submission directory:
 
