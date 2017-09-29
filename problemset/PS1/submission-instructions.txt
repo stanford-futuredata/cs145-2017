@@ -43,6 +43,6 @@ If your template passes the sanity checker, you can submit your assignment by ru
 
 /usr/class/cs145/bin/submit-pset
 
-Please note that this script will copy ALL of the files present in the current directory, so please only include files that you intend to submit. Once again, please make sure the current directory contains your submission template AND your Jupyter Notebook.
+Please note that this script will copy ALL of the files present in the current directory, so please only include files that you intend to submit. Once again, please make sure the current directory contains your submit.py file (but not your Jupyter notebook).
 
 If you have any questions or encounter any issues with the submission process, please let us know!
