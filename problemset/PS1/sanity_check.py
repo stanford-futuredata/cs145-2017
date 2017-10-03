@@ -11,6 +11,9 @@ CORRECT_OUTPUT_PATH = 'correct_output.txt'
 DATABASE_PATH = 'flights.db'
 
 def main(argv):
+    print "This is a sanity checking script. It will run your queries and compare them against the output of our solution."
+    print "However, grading will be done with a different data set to make sure your solutions don't rely on hard-coded answers."
+
     # get path to where the sanity check script lives 
     # (which presumably will also be where the reference correct output lives)
     sanity_check_folder = os.path.dirname(os.path.realpath(__file__))
@@ -49,6 +52,26 @@ def main(argv):
             diffPrinted = True
         print s
 
+    qwer =  foo.conn.execute(foo.Q7)
+    for i in qwer:
+        print i[0]
+
+
+    # special case run for Q7, which actually looks at the query result and does some math. Unfortunately, this requires hard coding the location of the answer into the code.
+    print "For Q7, we'll be allowing answers within %.2 of our answer. Checking your answer to Q7..."
+    q7correctAnswerIndex = correctOutputStrings.index("The result for Q7 was:")
+    q7correctAnswer = float(correctOutputStrings[q7correctAnswerIndex+4][1:-1])
+    q7query =  foo.conn.execute(foo.Q7)
+    q7answer = q7query.fetchone()
+    relativeDifference = abs(q7correctAnswer-q7answer[0])/q7correctAnswer
+    print "Your answer for Q7 was %.8f, and ours was %.8f. The relative difference is %f." % (q7answer[0], q7correctAnswer, relativeDifference)
+    if relativeDifference < .002:
+        print "Your answer for Q7 is within the error tolerance. You can ignore an error in the diff for Q7."
+    else:
+        print "Your answer for Q7 is outside the error tolerance. You should look at the error in the diff for Q7."
+
+
+    # print error message
     if diffPrinted:
         print "Your output may not match the correct output. Check the diff above for the difference between your output and the correct output."
         return 1
