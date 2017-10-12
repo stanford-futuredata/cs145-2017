@@ -1,4 +1,4 @@
-Submission Instructions for Problem Set 1
+Submission Instructions for Problem Set 2
 
 Although Jupyter Notebooks are a very useful tool for interactively playing with SQL queries, it turns out that they make autograding a pain. As a workaround, we’ve included an autograder-friendly submission template file (submit.py) for submitting your work.
 
