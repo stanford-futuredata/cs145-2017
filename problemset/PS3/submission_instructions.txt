@@ -1,0 +1,41 @@
+Submission Instructions for Problem Set 3
+
+Although Jupyter Notebooks are a very useful tool for interactively playing with SQL queries, it turns out that they make autograding a pain. As a workaround, we’ve included an autograder-friendly submission template file (submit.py) for submitting your work.
+
+For each question, copy and paste your final answer into the appropriate location in the template.
+
+Importantly, comment out your explanations using Python comments!
+
+Please let us know if you're stuck or confused about where to copy your answers.
+
+Once you’ve copied all of your code into the submission template, you’re ready to upload your code to myth/corn!
+
+First, log into either the myth or the corn cluster.
+
+ssh [SUNet ID]@corn.stanford.edu
+
+Once logged in, create a new directory for your submission. This directory should ONLY contain the files you intend to submit. (The submit script will copy ALL of the files present in this directory.)
+
+Example (the actual directory name doesn't matter):
+
+mkdir ~/cs145_ps3
+
+Copy your submit.py from your local machine into the new directory.
+
+On Linux and OS X you can copy files to myth/corn using SCP. To do so, run the following command on your local machine:
+
+scp -r [local path to directory containing files] [SUNet ID]@corn.stanford.edu:~/[directory for this assignment]
+
+On Windows, you can use an SFTP client like WinSCP to copy the files to myth/corn:
+
+http://winscp.net/eng/download.php
+
+Feel free to use any alternative methods of copying your files to myth/corn that you may prefer.
+
+You can submit your assignment by running the following command in your submission directory:
+
+/usr/class/cs145/bin/submit-pset
+
+Please note that this script will copy ALL of the files present in the current directory, so please only include files that you intend to submit. Once again, please make sure the current directory contains your submission template.
+
+If you have any questions or encounter any issues with the submission process, please let us know!
