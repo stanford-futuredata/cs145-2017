@@ -1,0 +1,77 @@
+history of NoSQL (30 minutes)
+	Internet happened: HTML is unstructured, XML, etc.
+	scale became a problem
+	      in theory, relational algebra scales just fine, it's just an _interface_
+	      in practice, many SQL database not built to scale
+	      also, hard to predict SQL performance
+	developers win! people like DHH, rails community basically rebuild from scratch
+		arguably worse tech, but zacleaner interfaces
+		e.g., MongoDB originally written by ads backend folks
+	today, get some mix of both..
+
+go through three-tier architecture
+   	   front-end: looks like a web server, app server, database
+	   scale each independently
+	   serverless is basically the same thing today...
+
+so what's different?
+   	  1) data model
+	  2) distribution policy
+
+data model: schemaless databases
+     LevelDB: key-value store 
+     	      pros: easy to build! easy to reason about! good performance
+	      cons: programming!
+
+     MONGODB example:
+	   pros: ease of development
+	   cons: difficult to do query + storage optimization, denormalization
+	   	 which techniques that we've learned apply?
+
+     REDIS: data structure storage
+
+     DataFrames... just tables!!!
+     		   can also read from SQL
+
+     ORMs
+	allow you to program in a native language
+	benefit compared to binary serialization? can use DBMS optimizations!
+	challenges include: data dependencies, pointers, nested data types, etc...
+	popular ORMs: Rails, Django, SQLAlchemy... (note: all single-language!!!)
+
+Key takeaways:
+    Large diversity of data stores, varying performance and features
+    Good start: SQL :)
+
+distribution (30 minutes)
+	what's hard:
+	       asynchrony
+	       failures
+	       joke: what's the difference between asynchrony and failure? (PAUSE...)
+	parallel query processing
+		 basically, execute joins and operations in parallel
+		 more on this in next lecture
+	transactions + fault tolerance
+		 shard data across servers for scalability
+		 replicate data across servers for fault tolerance
+		 what's hard here?
+		 	latency + communication cost
+			Peter's tattoo!
+		 
+world of tomorrow:
+	  ML + SQL
+	  ETL -> SQL -> ML -> SQL -> ML -> SQL ...
+
+ethics (10 minutes):
+	you have power
+	technology is not neutral
+	what we build has consequences
+	if you build a news feed ranker, you are influencing what people look at
+	    --> computing recidivism rates
+	    --> computer-based gerrymandering
+	    --> collection of massive amounts of data about citizens and users
+
+	these are major forces, and this course has equipped you with tools to add fuel to the fire
+	recognize: biases are _non-obvious_ and pernicious -- be cognizant and informed       
+	you have agency to direct the course of technology:
+	    make the world a better place! be brilliant, and be kind
